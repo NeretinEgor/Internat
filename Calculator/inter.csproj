@@ -1,0 +1,80 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>icon2.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="icon.ico" />
+    <None Remove="Resources\DE.png" />
+    <None Remove="Resources\earth0.png" />
+    <None Remove="Resources\earth1.png" />
+    <None Remove="Resources\EN.png" />
+    <None Remove="Resources\icon1.ico" />
+    <None Remove="Resources\icon2.ico" />
+    <None Remove="Resources\logo4.png" />
+    <None Remove="Resources\RU.png" />
+    <None Remove="Resources\закрыть акт2.png" />
+    <None Remove="Resources\закрыть2.png" />
+    <None Remove="Resources\свернуть акт2.png" />
+    <None Remove="Resources\свернуть2.png" />
+    <None Remove="Resources\стр акт.png" />
+    <None Remove="Resources\стр.png" />
+    <None Remove="Resources\шапка1.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\DE.png" />
+    <Resource Include="Resources\earth0.png" />
+    <Resource Include="Resources\earth1.png" />
+    <Resource Include="Resources\EN.png" />
+    <Resource Include="Resources\icon1.ico" />
+    <Resource Include="Resources\icon2.ico" />
+    <Resource Include="Resources\logo4.png" />
+    <Resource Include="Resources\RU.png" />
+    <Resource Include="Resources\закрыть акт2.png" />
+    <Resource Include="Resources\закрыть2.png" />
+    <Resource Include="Resources\свернуть акт2.png" />
+    <Resource Include="Resources\свернуть2.png" />
+    <Resource Include="Resources\стр акт.png" />
+    <Resource Include="Resources\стр.png" />
+    <Resource Include="Resources\шапка1.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\ResourcesLang.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ResourcesLang.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator></Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\ResourcesLang.resx">
+      <LastGenOutput>ResourcesLang.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Resources\Lang.eng-EN.xaml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Resources\Lang.deu-DE.xaml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Resources\Lang.rus-RU.xaml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+</Project>
